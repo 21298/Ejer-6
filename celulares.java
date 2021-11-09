@@ -3,12 +3,31 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Ejercicio6Parejas;
+
 
 /**
  *
  * @author alexd
  */
-public class celulares {
+public class celulares extends productos implements llamadas, portabie {
+
+
+    @Override
+    public void llamadas() {
+    }
+
+    @Override
+    public void portable() {
+    }
+    
+    @Override
+    public String mostrarDatos(){
+                return "Precio: " + precio + "\nSerie: " + serie + "\nMarca " + marca + "\nFecha: " + fecha + "\nMarcador AR: "+marcadorAR;
+    }
+    
+    public celulares(int precio, String serie, String marca, String fecha, String marcadorAR) {
+        super(precio, serie, marca, fecha, marcadorAR);
+    }
+
     
 }

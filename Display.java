@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Ejercicio6Parejas;
+
 
 import java.util.Scanner;
 
@@ -21,69 +21,51 @@ public class Display {
     }
     
     public int menuPrincipal(){
-        System.out.println("¿Que acción deseas realizar?");
-        System.out.println("""
-                           (1) Ver Productos
-                           (2) Carrito de Compras
-                           (3) Probar Funcionalidades
-                           (4). Salir""");
+        System.out.println("Que accion deseas realizar?");
+        System.out.println("(1) Ver Productos\n"
+                + "(2) Probar Funcionalidades\n"
+                + "(3) Carrito de Compras\n"
+                + "(4). Salir");
         
         int opcion = intscanner.nextInt();
         return opcion; 
     }
     
-    public String pedirNombre(){
-        System.out.println("Ingrese su nombre: ");
-        return stringscanner.nextLine();
-    }
-    public String pedirNIT(){
-        System.out.println("Ingrese su NIT: ");
-        return intscanner.nextLine();
-    }
-    public String fecha(){
-        System.out.println("Ingrese la fecha en formato - |dia/mes/año|: ");
-        return stringscanner.nextLine();
-    }
-    public String pedirPais(){
-        System.out.println("Ingrese el país: ");
-        return stringscanner.nextLine();
-    }
-    public String pedirFactura(){
-        System.out.println("Ingrese el numero de factura: ");
-        return intscanner.nextLine();
-    }
-    public String precio(){
-        System.out.println("Ingrese el precio: ");
-        return intscanner.nextLine();
-    }
-    public String pedirSerie(){
-        System.out.println("Ingrese el numero de Serie: ");
-        return stringscanner.nextLine();
-    }
-    public String pedirMarca(){
-        System.out.println("Ingrese la marca");
-        return stringscanner.nextLine();
-    }
-    public String pedirFabricacion(){
-        System.out.println("Ingrese la fecha de Fabricación: ");
-        return stringscanner.nextLine();
-    }
-    public String pedirMarcadorAR(){
-        System.out.println("Ingrese el marcador AR del producto: ");
-        return stringscanner.nextLine();
-    }
-    public String solicitarVideo(){
-        System.out.println("ingrese el video que quiere solicitar ");
-        return stringscanner.nextLine();
-    }
-    public String solicitarJuego(){
-        System.out.println("ingrese el Juego que quiere solicitar ");
-        return stringscanner.nextLine();
-    }
-    public String solicitarLink(){
-        System.out.println("ingrese el URL que quiere solicitar ");
-        return stringscanner.nextLine();
+    public void print(String text){
+        System.out.println(text);
     }
     
+    public int verProducto (){
+        System.out.println("Que producto desea ver?");
+        System.out.println("(1) SmathPhones\n"
+                + "(2) Telefonos Celulares\n{"
+                + "(3) Telefonos Fijos\n"
+                + "(4) Camaras Fotograficas\n"
+                + "(5) Computador Personal (Desktop)\n"
+                + "(6) Computador Personal (Laptop)\n"
+                + "(7) SmartTV\n"
+                + "(8) Tablets\n"
+                + "(9) SmartWatch\n"
+                + "Presione un numero");
+        
+        int opcion = intscanner.nextInt();
+        return opcion;
+    }
     
+    public int probar(){
+        System.out.println("Que producto desea probar");
+        System.out.println("(1) SmathPhones\n"
+                + "(2) Telefonos Celulares\n{"
+                + "(3) Telefonos Fijos\n"
+                + "(4) Camaras Fotograficas\n"
+                + "(5) Computador Personal (Desktop)\n"
+                + "(6) Computador Personal (Laptop)\n"
+                + "(7) SmartTV\n"
+                + "(8) Tablets\n"
+                + "(9) SmartWatch\n"
+                + "Presione un numero");
+        
+        int opcion = intscanner.nextInt();
+        return opcion;
+    }
 }
