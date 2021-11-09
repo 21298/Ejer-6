@@ -10,5 +10,5 @@ package Ejercicio6Parejas;
  * @author alexd
  */
 public interface navegarInternet {
-    
+    public void navegarInternet();
 }

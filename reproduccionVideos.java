@@ -10,5 +10,6 @@ package Ejercicio6Parejas;
  * @author alexd
  */
 public interface reproduccionVideos {
-    
+ 
+    public void reproduccionVideos();
 }

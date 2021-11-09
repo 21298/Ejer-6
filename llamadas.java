@@ -11,4 +11,5 @@ package Ejercicio6Parejas;
  */
 public interface llamadas {
     
+    public void llamadas();
 }

@@ -11,4 +11,5 @@ package Ejercicio6Parejas;
  */
 public class smartPhones {
     
+    
 }
