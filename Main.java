@@ -1,19 +1,25 @@
 
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * UNIVERSIDAD DEL VALLE DE GUATEMALA
+ * PROGRAMACIÓN ORIENTADA A OBJETOS
+ * EJERCICIO#6 
+ * JAVIER ALEJANDRO PRADO RAMIREZ 21486 | ANGEL GABRIEL PEREZ FIGUEROA 21298
+ * PROGRAMA UTILIZADO | APACHE NETBEANS
+ * INGENIERÍA EN CIENCIAS DE LA COMPUTACIÓN Y TI
  */
 
 
 
 /**
- *
- * @author alexd
+ * Funcionalidad: A través de esta clase se podrá manejar y llevar la compilación del programa
+ * 
  */
+
 public class Main {
 
     /**
@@ -32,6 +38,10 @@ public class Main {
         smarTV TVs = new smarTV();
         tablet tabs = new tablet();
         SmartWatch smawa = new SmartWatch();
+        List<String> carrito = new ArrayList<String>();
+        List<Integer> Precios = new ArrayList<Integer>();
+        Cliente c = new Cliente();
+        
         dis.inicio();
         boolean stop = false;
         while (!stop) {
@@ -119,6 +129,7 @@ public class Main {
 
                                 default:
                                     dis.print("Ha escogido una opcion no disponible, Intente de nuevo!");
+                                    
 
                                 }
 
@@ -148,6 +159,7 @@ public class Main {
                                    }
                                    }catch(Exception e){
                                        dis.print("Ha ocurrido un error, Reinicie el programa y corra de nuevo!!");
+                                       scan.nextLine();
 
                                    }
                                    
@@ -170,6 +182,7 @@ public class Main {
                                    }
                                    }catch(Exception e){
                                        dis.print("Ha ocurrido un error, Reinicie el programa y corra de nuevo!!");
+                                       scan.nextLine();
 
                                    }
 
@@ -193,6 +206,7 @@ public class Main {
                                    }
                                    }catch(Exception e){
                                        dis.print("Ha ocurrido un error, Reinicie el programa y corra de nuevo!!");
+                                       scan.nextLine();
                                    }
 
                                    break;
@@ -215,6 +229,7 @@ public class Main {
                     
                                    }catch(Exception e){
                                        dis.print("Ha ocurrido un error, Reinicie el programa y corra de nuevo!!");
+                                       scan.nextLine();
   
                                    }
 
@@ -235,6 +250,7 @@ public class Main {
                                        
                                    }catch(Exception e){
                                        dis.print("Ha ocurrido un error, Reinicie el programa y corra de nuevo!!");
+                                       scan.nextLine();
                                    }
 
                                    break;
@@ -257,7 +273,8 @@ public class Main {
                                    }
                                    catch(Exception e){
                                            dis.print("Ha ocurrido un error, Reinicie el programa y corra de nuevo!!");
-                                           }
+                                           scan.nextLine();
+                                   }
 
                                    break;
                                case 9: //Smartwatch
@@ -275,6 +292,7 @@ public class Main {
                                    }
                                    }catch(Exception e){
                                        dis.print("Ha ocurrido un error, Reinicie el programa y corra de nuevo!!");
+                                       scan.nextLine();
                                    }
 
                                    break;
@@ -283,12 +301,89 @@ public class Main {
                         }
                         }catch(Exception e){
                             dis.print("Ha ocurrido un error, Reinicie el programa y corra de nuevo!!");
+                            scan.nextLine();
                         }
                         break;
-                    case 3:
+                        
+                    case 3:   // carrito    
+                        try{
+                            int opcioncompra = dis.compra();
+                            switch(opcioncompra){
+                                case 1: // Smartphone
+                                    System.out.println("Se ha añadido un SmartPhone a su carrito ");
+                                    carrito.add("Iphone 13");
+                                    Precios.add(c.SmartphonePrecio);
+                                    break;
+                                    
+                                case 2: // Celular
+                                    System.out.println("Se ha añadido un Celular a su carrito");
+                                    carrito.add("Nokia");
+                                    Precios.add(c.CelularPrecio);
+                                    break;
+                                
+                                case 3: // Telefono Fijo
+                                    System.out.println("Se ha añadido un Telefono Fijo a su carrito");
+                                    carrito.add("Telefono Fijo");
+                                    Precios.add(c.TelefonoFijoPrecio);
+                                    break;
+                                case 4:  // camara
+                                    System.out.println("Se ha añadido una camara fotografica a su carrito");
+                                    carrito.add("Cámara Nikon");
+                                    Precios.add(c.CamaraPrecio);
+                                    break;
+                                case 5: //Desktop
+                                    System.out.println("Se ha añadido una computadora(Desktop) a su carrito");
+                                    carrito.add("HP");
+                                    Precios.add(c.DesktopPrecio);
+                                    break;
+                                case 6: //Laptop
+                                    System.out.println("Se ha añadido una laptop a su carrito");
+                                    carrito.add("HP Pavilion");
+                                    Precios.add(c.LaptopPrecio);
+                                    break;
+                                case 7:
+                                    System.out.println("Se ha añadido una smartTV a su carrito");
+                                    carrito.add("LG Galaxy");
+                                    Precios.add(c.TVPrecio);
+                                    break;
+                                case 8:
+                                    System.out.println("Se ha añadido una tablet a su carrito");
+                                    carrito.add("IPAD");
+                                    Precios.add(c.TabletPrecio);
+                                    break;
+                                case 9:
+                                    System.out.println("Se ha añadido un SmartWatch a su carrito");
+                                    carrito.add("SmartWatch");
+                                    Precios.add(c.SmartwatchPrecio);
+                                    break;
+                                default:
+                                    dis.print("Ha escogido una opcion no disponible, Intente de nuevo!");
+                                    
+                                    
+                            }
+                            
+                            
+                        }catch(Exception e){
+                            dis.print("Ha ocurrido un error, Reinicie el programa y corra de nuevo!");
+                            scan.nextLine();
+                        }
+                        
+                        
                         break;
-                    case 4:
+                    case 4: // Pagar Carrito - Se agrego esta opcion como una actualizacion del programa, y es necesario por que es un requisito funcional
+                        for(Integer data : Precios){
+                                        c.TotalPrecio += data;
+                                    }
+                                    System.out.println("Total a pagar:\n"+c.TotalPrecio);
+                                    dis.facturar();
                         break;
+                    
+                    case 5:
+                        stop = true;
+                        System.out.println("Sesión cerrada, hasta la próxima");
+                        break;
+                        
+                        
                     default:
                         dis.print("Ha escogido una opcion no disponible, Intente de nuevo!");
                 }

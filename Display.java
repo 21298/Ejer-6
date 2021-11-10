@@ -1,8 +1,16 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * UNIVERSIDAD DEL VALLE DE GUATEMALA
+ * PROGRAMACIÓN ORIENTADA A OBJETOS
+ * EJERCICIO#6 
+ * JAVIER ALEJANDRO PRADO RAMIREZ 21486 | ANGEL GABRIEL PEREZ FIGUEROA 21298
+ * PROGRAMA UTILIZADO | APACHE NETBEANS
+ * INGENIERÍA EN CIENCIAS DE LA COMPUTACIÓN Y TI
  */
+
+
+/*
+ * Funcionalidad: Se utiliza para la recolección y demostración “gráfica” del programa, es decir, todos los menús, el ingreso de datos, etc
+*/
 
 
 import java.util.Scanner;
@@ -26,7 +34,8 @@ public class Display {
         System.out.println("(1) Ver Productos\n"
                 + "(2) Probar Funcionalidades\n"
                 + "(3) Carrito de Compras\n"
-                + "(4). Salir");
+                + "(4) Pagar Carrito\n"
+                + "(5). Salir");
         
         int opcion = intscanner.nextInt();
         return opcion; 
@@ -55,7 +64,24 @@ public class Display {
     
     public int probar(){
         System.out.println("Que producto desea probar");
-        System.out.println("(1) SmathPhones\n"
+        System.out.println("(1) SmartPhones\n"
+                + "(2) Telefonos Celulares\n{"
+                + "(3) Telefonos Fijos\n"
+                + "(4) Camaras Fotograficas\n"
+                + "(5) Computador Personal (Desktop)\n"
+                + "(6) Computador Personal (Laptop)\n"
+                + "(7) SmartTV\n"
+                + "(8) Tablets\n"
+                + "(9) SmartWatch\n"
+                + "Presione un numero");
+        
+        int opcion = intscanner.nextInt();
+        return opcion;
+    }
+    
+    public int compra(){
+        System.out.println("Que producto desea comprar: ");
+        System.out.println("(1) SmartPhones\n"
                 + "(2) Telefonos Celulares\n{"
                 + "(3) Telefonos Fijos\n"
                 + "(4) Camaras Fotograficas\n"
@@ -152,6 +178,29 @@ public class Display {
         int opcion = intscanner.nextInt();
         return opcion;
     }
+    private String Nombrec;
+    private String NITC;
+    private String fechaC;
+    public String facturar(){ //Se agregó este metodo para pooder facturar las compras del cliente de una mejor manera
+        
+        System.out.println("Ingrese el nombre del cliente: ");
+        Nombrec = stringscanner.nextLine();
+        System.out.println("Ingrese el numero de NIT: ");
+        NITC = stringscanner.nextLine();
+        System.out.println("Ingrese la fehca dd-mm-año");
+        fechaC = stringscanner.nextLine();
+        
+        System.out.println("\nElectronica Latinoamericana\n"
+                + "Nombre: "+Nombrec 
+                +"\nNIT: " + NITC
+        +"\nFecha: "+ fechaC
+        +"\nGracias por su compra :D");
+        System.out.println("");
+        return "Nombre: " + Nombrec + "\nNIT: " + NITC ;
+        
+    
+    }
+            
 
 
 

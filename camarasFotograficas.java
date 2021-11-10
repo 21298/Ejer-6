@@ -1,14 +1,20 @@
 
+/*
+ * UNIVERSIDAD DEL VALLE DE GUATEMALA
+ * PROGRAMACIÓN ORIENTADA A OBJETOS
+ * EJERCICIO#6 
+ * JAVIER ALEJANDRO PRADO RAMIREZ 21486 | ANGEL GABRIEL PEREZ FIGUEROA 21298
+ * PROGRAMA UTILIZADO | APACHE NETBEANS
+ * INGENIERÍA EN CIENCIAS DE LA COMPUTACIÓN Y TI
+ */
+
 import java.util.Scanner;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 
 /**
  *
- * @author HP
+ * Funcionalidad: representación de los dispositivos tipo camara
  */
 public class camarasFotograficas extends productos implements tomarFoto, reproduccionVideos, portabie{
         Scanner stringscanner = new Scanner(System.in);

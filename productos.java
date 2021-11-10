@@ -1,13 +1,16 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * UNIVERSIDAD DEL VALLE DE GUATEMALA
+ * PROGRAMACIÓN ORIENTADA A OBJETOS
+ * EJERCICIO#6 
+ * JAVIER ALEJANDRO PRADO RAMIREZ 21486 | ANGEL GABRIEL PEREZ FIGUEROA 21298
+ * PROGRAMA UTILIZADO | APACHE NETBEANS
+ * INGENIERÍA EN CIENCIAS DE LA COMPUTACIÓN Y TI
  */
 
 
 /**
  *
- * @author alexd
+ * Funcionalidad: este clase tiene como objetivo dar la representación de cada uno de los atributos de los dispositivos en venta
  */
 public class productos {
     

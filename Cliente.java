@@ -1,13 +1,19 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * UNIVERSIDAD DEL VALLE DE GUATEMALA
+ * PROGRAMACIÓN ORIENTADA A OBJETOS
+ * EJERCICIO#6 
+ * JAVIER ALEJANDRO PRADO RAMIREZ 21486 | ANGEL GABRIEL PEREZ FIGUEROA 21298
+ * PROGRAMA UTILIZADO | APACHE NETBEANS
+ * INGENIERÍA EN CIENCIAS DE LA COMPUTACIÓN Y TI
+ */
 
-
+import java.util.*;
 /**
  *
- * @author alexd
+ * Funcionalidad: Esta clase tiene como deber representar todas las características que son provenientes del cliente, sus atributos y acciones
  */
+
+
 public class Cliente {
     private String nombre;
     private String INT;
@@ -15,6 +21,21 @@ public class Cliente {
     private String Factura;
     private String pais;
     private int valor; // monto
+    
+    protected int TotalPrecio;
+    protected int PrecioTotal;
+    protected int SmartphonePrecio = 1000;
+    protected int CelularPrecio = 200;
+    protected int TelefonoFijoPrecio = 300;
+    protected int CamaraPrecio = 6249;
+    protected int TVPrecio = 3600;
+    protected int TabletPrecio = 1999;
+    protected int SmartwatchPrecio = 2999;
+    protected int LaptopPrecio = 2500;
+    protected int DesktopPrecio = 2000;
+    
+    
+    
 
     public String getNombre() {
         return nombre;

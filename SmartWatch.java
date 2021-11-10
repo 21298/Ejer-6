@@ -1,17 +1,23 @@
+/*
+ * UNIVERSIDAD DEL VALLE DE GUATEMALA
+ * PROGRAMACIÓN ORIENTADA A OBJETOS
+ * EJERCICIO#6 
+ * JAVIER ALEJANDRO PRADO RAMIREZ 21486 | ANGEL GABRIEL PEREZ FIGUEROA 21298
+ * PROGRAMA UTILIZADO | APACHE NETBEANS
+ * INGENIERÍA EN CIENCIAS DE LA COMPUTACIÓN Y TI
+ */
+
 
 import java.util.Scanner;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 
 
 /**
- *
- * @author alexd
+ * Funcionalidad: representación de los dispositivos tipo SmartWatch
+ * 
  */
+
 public class SmartWatch extends productos implements tomarFoto, portabie, llamadas {
     Scanner stringscanner = new Scanner(System.in);
     private String numero; 
