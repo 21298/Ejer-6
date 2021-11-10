@@ -24,6 +24,9 @@ public class productos {
         this.fecha = fecha;
         this.marcadorAR = marcadorAR;  
     }
+    public productos(){
+    
+}
 
     public int getPrecio() {
         return precio;

@@ -1,21 +1,18 @@
-
- 
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
 
 import java.util.Scanner;
 
 
 public class Display {
-    
-private String numero; 
-private String navegacionURL;
-private String videoURL;
-private String reproducirSP;
-    
-    
-    
+
     Scanner intscanner = new Scanner(System.in);
     Scanner stringscanner = new Scanner(System.in);
+
     
     public void inicio(){
         System.out.println("--------------------------------------------");
@@ -41,7 +38,7 @@ private String reproducirSP;
     
     public int verProducto (){
         System.out.println("Que producto desea ver?");
-        System.out.println("(1) SmartPhones\n"
+        System.out.println("(1) SmathPhones\n"
                 + "(2) Telefonos Celulares\n{"
                 + "(3) Telefonos Fijos\n"
                 + "(4) Camaras Fotograficas\n"
@@ -73,7 +70,6 @@ private String reproducirSP;
         return opcion;
     }
     
-    // Funcionalidades para el SmartPhone
     public int pruebaSmartPhone(){
         System.out.println("Que funcion quieres probar del smarthPhone (Es portable)");
         System.out.println("(1) Llamadas\n"
@@ -83,11 +79,9 @@ private String reproducirSP;
         int opcion = intscanner.nextInt();
         return opcion;
     }
-     
-     
-    // Funcionalidades para el Celular
+    
     public int pruebaCelular(){
-        System.out.println("Que funcion quieres probar del celular");
+        System.out.println("Que funcion quieres probar del celular(es Portable)");
         System.out.println("(1) Llamadas\n");
         int opcion = intscanner.nextInt();
         return opcion;
@@ -109,7 +103,7 @@ private String reproducirSP;
         int opcion = intscanner.nextInt();
         return opcion;
     }
-    
+
     //Funcionalidades para computador personal
     public int pruebaDesktop(){
         System.out.println("Que funcion quieres probar del computador personal: ");
@@ -130,8 +124,7 @@ private String reproducirSP;
         int opcion = intscanner.nextInt();
         return opcion;
     }
-    
-    //Funcionalidades para Smart TV
+//Funcionalidades para Smart TV
     public int pruebaSmartTV(){
         System.out.println("Que funcion quieres probar de la SmartTV ");
         System.out.println("(1) Navegar por internet\n");
@@ -140,8 +133,7 @@ private String reproducirSP;
         int opcion = intscanner.nextInt();
         return opcion;
     }
-    
-    //Funcionalidades para Tablets
+
     public int pruebaTablets(){
         System.out.println("Que funcion quieres probar da la tablet ");
         System.out.println("(2) Fotografias\n");
@@ -151,8 +143,7 @@ private String reproducirSP;
         int opcion = intscanner.nextInt();
         return opcion;
     }
-    
-    //Funcionalidades para Smart Watch
+//Funcionalidades para Smart Watch
     public int pruebaSmartWatch(){
         System.out.println("Que funcion quieres probar del SmartWatch (Es portable)");
         System.out.println("(2) Fotografias\n");
@@ -161,8 +152,13 @@ private String reproducirSP;
         int opcion = intscanner.nextInt();
         return opcion;
     }
-   
+
+
+
 
     
+  
+
 
 }
+

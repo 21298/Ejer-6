@@ -1,4 +1,5 @@
 
+
 import java.util.Scanner;
 
 /*
@@ -22,9 +23,15 @@ public class Main {
         // TODO code application logic here
         Scanner scan = new Scanner(System.in);
         Display dis = new Display();
-        
-
-        
+        smartPhones sPhoness = new smartPhones();
+        celulares celul = new celulares();
+        telefonoFijo tFijo = new telefonoFijo();
+        camarasFotograficas cam = new camarasFotograficas();
+        desktop deskt = new desktop();
+        laptop lapt = new laptop();
+        smarTV TVs = new smarTV();
+        tablet tabs = new tablet();
+        SmartWatch smawa = new SmartWatch();
         dis.inicio();
         boolean stop = false;
         while (!stop) {
@@ -85,12 +92,198 @@ public class Main {
                                           
                            }
                         }catch(Exception e){
-                            dis.print("Ha ocurrido un error, intente de nuevo! 2");
+                            dis.print("Ha ocurrido un error, Reinicie el programa y corra de nuevo!");
                             scan.nextLine();
                         }
-                        
                         break;
                     case 2:
+                        try{
+                        int prueba = dis.probar();
+                        switch(prueba){
+                            case 1: //smartphone
+                                int psmart = dis.pruebaSmartPhone();
+                                switch(psmart){
+                                    case 1:
+                                        sPhoness.llamadas();
+                                        break;
+                               
+                                    case 2: 
+                                        sPhoness.tomarFoto();
+                                        break;
+                                    case 3:
+                                        sPhoness.navegarInternet();
+                                        break;
+                                    case 4:
+                                        sPhoness.reproduccionVideos();
+                                        break;
+
+                                default:
+                                    dis.print("Ha escogido una opcion no disponible, Intente de nuevo!");
+
+                                }
+
+                                   System.out.println("\n");
+                                   break;
+                               case 2://celulares
+                                   int pcelular = dis.pruebaCelular();
+                                   switch(pcelular){
+                                       case 1:
+                                           celul.llamadas();
+                                           break;
+                                       default:
+                                           dis.print("Ha escogido una opcion no disponible, Intente de nuevo!");
+                                   }
+                                   System.out.println("\n");
+                                   break;
+                               case 3://telefonos fijos
+                                   try{
+                                   int pFijo = dis.pruebaTelefonoFijo();
+                                   switch(pFijo){
+                                       case 1:
+                                           tFijo.llamadas();
+                                           break;
+                                       default:
+                                           dis.print("Ha escogido una opcion no disponible, Intente de nuevo!");
+
+                                   }
+                                   }catch(Exception e){
+                                       dis.print("Ha ocurrido un error, Reinicie el programa y corra de nuevo!!");
+
+                                   }
+                                   
+
+                                   System.out.println("\n");
+                                   break;
+                               case 4://camaras fotograficas
+                                   try{
+                                   int coption = dis.pruebaCamara();
+                                   switch(coption){
+                                       case 1:
+                                           cam.tomarFoto();
+                                           break;
+                                       case 2: 
+                                           cam.reproduccionVideos();
+                                           break;
+                                       default:
+                                           dis.print("Ha escogido una opcion no disponible, Intente de nuevo!");
+
+                                   }
+                                   }catch(Exception e){
+                                       dis.print("Ha ocurrido un error, Reinicie el programa y corra de nuevo!!");
+
+                                   }
+
+                                   System.out.println("\n");
+                                   break;
+                               case 5://Computador Personal (Desktop)
+                                   try{
+                                   int deskoption = dis.pruebaDesktop();
+                                   switch(deskoption){
+                                       case 1:
+                                           deskt.navegarInternet();
+                                           break;
+                                       case 2:
+                                           deskt.reproduccionVideos();
+                                           break;
+                                       case 3:
+                                           deskt.videoJuegos();
+                                           break;
+                                       default:
+                                       dis.print("Ha escogido una opcion no disponible, Intente de nuevo!");
+                                   }
+                                   }catch(Exception e){
+                                       dis.print("Ha ocurrido un error, Reinicie el programa y corra de nuevo!!");
+                                   }
+
+                                   break;
+                               case 6://Computador Personal (laptop)
+                                   try{
+                                       int lapoption = dis.pruebaLaptop();
+                                       switch(lapoption){
+                                           case 1:
+                                               lapt.navegarInternet();
+                                               break;
+                                           case 2:
+                                               lapt.videoJuegos();
+                                               break;
+                                           case 3:
+                                               lapt.reproduccionVideos();
+                                               break;
+                                           default:
+                                               dis.print("Ha escogido una opcion no disponible, Intente de nuevo!");    
+                                       }
+                    
+                                   }catch(Exception e){
+                                       dis.print("Ha ocurrido un error, Reinicie el programa y corra de nuevo!!");
+  
+                                   }
+
+                                   break;
+                               case 7://Smart TV
+                                   try{
+                                       int soption = dis.pruebaSmartTV();
+                                       switch(soption){
+                                           case 1:
+                                               TVs.navegarInternet();
+                                               break;
+                                           case 2:
+                                               TVs.reproduccionVideos();
+                                               break;
+                                           default:
+                                               dis.print("Ha escogido una opcion no disponible, Intente de nuevo!");
+                                       }
+                                       
+                                   }catch(Exception e){
+                                       dis.print("Ha ocurrido un error, Reinicie el programa y corra de nuevo!!");
+                                   }
+
+                                   break;
+                               case 8://Tablets
+                                   try{
+                                   int toption = dis.pruebaTablets();
+                                   switch(toption){
+                                       case 1:
+                                           tabs.tomarFoto();
+                                           break;
+                                       case 2:
+                                           tabs.navegarInternet();
+                                           break;
+                                       case 3: 
+                                           tabs.reproduccionVideos();
+                                           break;
+                                       default:
+                                          dis.print("Ha escogido una opcion no disponible, Intente de nuevo!");
+                                   }
+                                   }
+                                   catch(Exception e){
+                                           dis.print("Ha ocurrido un error, Reinicie el programa y corra de nuevo!!");
+                                           }
+
+                                   break;
+                               case 9: //Smartwatch
+                                   try{
+                                   int smartoption = dis.pruebaSmartWatch();
+                                   switch(smartoption){
+                                       case 1:
+                                           smawa.tomarFoto();
+                                           break;
+                                       case 2:
+                                           smawa.llamadas();
+                                           break;
+                                       default:
+                                           dis.print("Ha escogido una opcion no disponible, Intente de nuevo!");
+                                   }
+                                   }catch(Exception e){
+                                       dis.print("Ha ocurrido un error, Reinicie el programa y corra de nuevo!!");
+                                   }
+
+                                   break;
+                               default:
+                                   dis.print("Ha escogido una opcion no disponible, Intente de nuevo!");
+                        }
+                        }catch(Exception e){
+                            dis.print("Ha ocurrido un error, Reinicie el programa y corra de nuevo!!");
+                        }
                         break;
                     case 3:
                         break;
@@ -100,7 +293,7 @@ public class Main {
                         dis.print("Ha escogido una opcion no disponible, Intente de nuevo!");
                 }
             }catch(Exception e){
-                dis.print("Ha ocurrido un error, intente de nuevo 1!");
+                dis.print("Ha ocurrido un error, Reinicie el programa y corra de nueva!");
                 scan.nextLine();
             }
             
